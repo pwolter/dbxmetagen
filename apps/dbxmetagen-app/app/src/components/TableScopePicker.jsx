@@ -186,7 +186,9 @@ export default function TableScopePicker({
             </div>
           )}
           {tables.length === 0 && (
-            <p className="text-xs text-amber-600 dark:text-amber-400">Select at least one table, or switch to “{allLabel}”.</p>
+            <p className="text-xs text-amber-600 dark:text-amber-400">
+              {allowAll ? `Select at least one table, or switch to “${allLabel}”.` : 'Select at least one table to run.'}
+            </p>
           )}
         </div>
       )}
